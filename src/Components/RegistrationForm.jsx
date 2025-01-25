@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../App.css"; // Importing the CSS file
+import { Helmet } from "react-helmet-async";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +50,14 @@ const RegistrationForm = () => {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>RegistrationForm</title>
+    </Helmet>
+    
     <div className="container">
+      
+      
       <h1>Registration Form</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -116,7 +124,9 @@ const RegistrationForm = () => {
         <button type="submit">Submit</button>
       </form>
     </div>
+    </>
   );
+  
 };
 
 export default RegistrationForm;

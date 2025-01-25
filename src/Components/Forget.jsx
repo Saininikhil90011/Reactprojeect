@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../App.css"; // Importing the CSS file
+import { Helmet } from "react-helmet-async";
 
 const Forget = () => {
   const [formData, setFormData] = useState({
@@ -51,6 +52,10 @@ const Forget = () => {
   };
 
   return (
+    <>
+     <Helmet>
+          <title> ForgetForm</title>
+        </Helmet>
     <div className="container">
       <h1>Forget Password</h1>
 
@@ -96,6 +101,7 @@ const Forget = () => {
         <button type="submit">Submit</button>
       </form>
     </div>
+    </>
   );
 };
 
