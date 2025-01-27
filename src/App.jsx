@@ -16,6 +16,7 @@ function App() {
     <HelmetProvider>  
     <BrowserRouter>
     <Routes>
+      <Route path='/' element={<h1>hello</h1>}/>
       <Route path='/login' element={<Login></Login>}/>
       <Route path='/registration' element={<RegistrationForm/>}/>
       <Route path='/forget' element={<Forget/>}/>
